@@ -1,4 +1,4 @@
-package basics
+package basics.datatype
 
 //Type Bound in Scala is like a rule. Type Bound limits what a parameter and variable can be. You can set the limits for the variables in the Scala.
 /*

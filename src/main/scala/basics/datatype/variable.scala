@@ -1,4 +1,4 @@
-package basics
+package basics.datatype
 
 object variable{
    def main (args:Array[String]):Unit = {

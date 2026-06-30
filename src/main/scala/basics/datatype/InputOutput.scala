@@ -1,8 +1,7 @@
-package basics
-
+package basics.datatype
 
 //Scala provides built-in methods via scala.io.StdIn for reading inputs and standard printing functions for outputs.
-import scala.io.StdIn._
+import scala.io.StdIn.*
 //Writing Output
 /*
   1. print(): Prints the value to the console without a newline.

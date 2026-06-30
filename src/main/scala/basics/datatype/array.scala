@@ -1,5 +1,4 @@
-package basics
-
+package basics.datatype
 
 //In Scala ,an Array stores multiple values of the same type in contiguous memory Location
 /*

@@ -1,4 +1,5 @@
-package basics
+package basics.datatype
+
 /*
 In Scala, Type Hierarchy means how all data types are organized in a parent-child structure.
                      Any
