@@ -40,5 +40,42 @@ object forLoop {
     val doubledNumbers = for (n <- numbers) yield n * 2
     println(doubledNumbers)
 
+    val shapes=List("triangle","square")
+    val colours=List("red","green","blue")
+    for{
+      shape <- shapes
+      colour <- colours
+    } println(s"the $shape is $colour")
+
+    shapes.foreach{
+      shape=>colours.foreach{
+        colour=> println(s"the $shape is $colour.")
+      }
+        
+        
+        def sum(numbers:List[Int]):Int= {
+          var total=0;
+          for(number <- numbers)
+            total +=number
+            
+          total
+        }
+        println("sum of numbers are : "+ sum(List(1,8,-1,9)))
+    }
+
+
+    //while loop
+    //scala 2
+    var x=4
+    while(x>=0){
+      println(x)
+      x=x-1
+    }
+    //scala 3
+    var y=3
+    while y>=0
+    do
+      println(y)
+      y=y-1
   }
 }
