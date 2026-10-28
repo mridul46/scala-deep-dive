@@ -24,9 +24,13 @@ object methods {
   def add(a: Int, b: Int): Int = {
     a + b
   }
-  
+  def sub(a:Int,b:Int):Int={
+    a-b
+  }
   def main (args:Array[String]):Unit={
     val sum = add(5, 3)
     println(s"The sum is: $sum")
+
+    println(s"the difference of two number is ${sub(4,2)}")
   }
 }
