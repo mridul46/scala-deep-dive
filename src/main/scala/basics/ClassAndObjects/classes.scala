@@ -2,9 +2,24 @@ package basics.ClassAndObjects
 
 
 /*
-   A class is a blueprint for object .
+   A class is a blueprint for object . it defines the data an object holds and the operations it can perform.
    it uses the "new" keyword
+
+
+   scala supports a primary constructor and additional constructors called auxiliary constructor.
  */
+
+//Basic class syntax in Scala
+class Student1 (val name: String, val id:Int, val marks:Double){
+  def displayDetails():Unit={
+    println(s"Name : $name")
+    println(s"Id : $id" )
+    println(s"Marks :$marks")
+  }
+  def hasPassed(): Boolean={
+    marks>=40
+  }
+}
 class User {
   // Fields (Variables)
   var name: String = "Guest"
@@ -96,6 +111,18 @@ class Dog extends Animal {
     println("Bark! Bark!")
   }
 }
+
+
+
+//constructor parameter : val ,var, and neither
+//using val
+class User11(val name:String)
+//using var
+class User22(var name:String)
+//using neither
+class User33(name: String) {
+  def greet():String= s"Hello $name"
+}
 object classes {
    def main (args:Array[String]): Unit = {
      val user1 = new User()
@@ -131,5 +158,28 @@ object classes {
      val myDog = new Dog()
      myDog.makeSound() // Output: Bark! Bark!
      myDog.sleep()     // Output: Zzz...
+
+
+     val student1 = new Student1("Rahul", 101, 85.0)
+     val student2 = new Student1("Priya", 102, 35.0)
+     student1.displayDetails()
+     println(student1.hasPassed())
+     println(student2.hasPassed())
+
+     //Constructor parameters: val, var, and neither
+     //val
+     val user= new User11("Mridul")
+     println(user.name)
+     //user.name="Amit" //ERROR
+
+     //var
+     val user22 = new User22("Rahul")
+     user22.name = "Amit"
+     println(user22.name) // Amit
+
+     //neither
+     val user33 = new User33("Rahul")
+     println(user33.greet()) // Hello Rahul
+     // println(user.name) // Error
    }
 }
